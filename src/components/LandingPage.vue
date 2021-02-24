@@ -148,12 +148,12 @@ Vue.use(ToggleButton);
 
 const axiosPix =
   process.env.NODE_ENV === "development"
-    ? axios.create({ baseURL: "http://localhost:5001" })
+    ? axios.create({ baseURL: `http://{window.location.hostname}:5001` })
     : axios.create({ baseURL: "https://dip.imfing.com/pix" });
 
 const axiosStyle =
   process.env.NODE_ENV === "development"
-    ? axios.create({ baseURL: "http://localhost:5002" })
+    ? axios.create({ baseURL: `http://{window.location.hostname}:5002` })
     : axios.create({ baseURL: "https://dip.imfing.com/style" });
 
 export default {
