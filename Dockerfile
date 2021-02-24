@@ -13,7 +13,7 @@ RUN mkdir -p /usr/src/app
 
 # Install Python dependencies
 ADD server/requirements.txt /tmp/
-RUN pip3 --no-cache-dir install -r /tmp/requirements.txt
+RUN pip3 install -r /tmp/requirements.txt --trusted-host mirrors.aliyun.com --index-url http://mirrors.aliyun.com/pypi/simple
 
 # Install node packages
 # ADD ./package.json ./yarn.* /tmp/
